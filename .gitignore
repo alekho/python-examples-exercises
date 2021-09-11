@@ -34,12 +34,13 @@ Thumbs.db
 # Virtualenv
 # http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
 pyneng/.Python
-pyneng/[Bb]in
-pyneng/[Ii]nclude
-pyneng/[Ll]ib
-pyneng/[Ll]ib64
-pyneng/[Ll]ocal
-pyneng/[Ss]cripts
+pyneng/bin
+pyneng/include
+pyneng/lib
+pyneng/share
+pyneng/lib64
+pyneng/local
+pyneng/scripts
 pyneng/pyvenv.cfg
 pyneng/.venv
 pyneng/pip-selfcheck.json
