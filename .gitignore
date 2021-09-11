@@ -33,6 +33,7 @@ Thumbs.db
 
 # Virtualenv
 # http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
+pyneng/*
 pyneng/.Python
 pyneng/bin
 pyneng/include
