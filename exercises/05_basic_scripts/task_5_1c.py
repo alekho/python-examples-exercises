@@ -49,3 +49,8 @@ london_co = {
         "routing": True,
     },
 }
+
+nested_dict = london_co[input('Введите имя устройства:')]
+key = list(nested_dict.keys())
+item_config = input('Введите имя параметра ('+ ','.join(key) + '):')
+print(nested_dict.get(item_config, 'Такого параметра нет'))
