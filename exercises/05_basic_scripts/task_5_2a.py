@@ -49,3 +49,27 @@ bin_ip = "00001010000000010000000111000011"
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 
 """
+
+ip_net = input('Введите сеть:')
+ip, prefix_mask = ip_net.split('/')
+oct1, oct2, oct3, oct4 = ip.split('.')
+prefix_mask = int(prefix_mask)
+zero = 32 - prefix_mask
+mask = str(prefix_mask * '1' + zero * '0')
+moct1, moct2, moct3, moct4 = mask[:8], mask[8:16], mask[16:24], mask[24:]
+ip_bin = bin(int(oct1) + 256)[3:] + bin(int(oct2) + 256)[3:] + bin(int(oct3) + 256)[3:] + bin(int(oct4) + 256)[3:] # Переводим IP в бинарное представление
+net_address = str(ip_bin[:prefix_mask]) + (zero * '0')
+noct1, noct2, noct3, noct4 = net_address[:8], net_address[8:16], net_address[16:24], net_address[24:]
+
+
+
+print(f'''
+Network:
+{int(noct1, 2):<10}{int(noct2, 2):<10}{int(noct3, 2):<10}{int(noct4, 2):<10}
+{noct1:<8}  {noct2:<8}  {noct3:<8}  {noct4:<8}''')
+
+print(f'''
+Mask:
+{'/' + str(prefix_mask)}
+{int(moct1, 2):<10}{int(moct2, 2):<10}{int(moct3, 2):<10}{int(moct4, 2):<10}
+{moct1:<8}  {moct2:<8}  {moct3:<8}  {moct4:<8}''')
