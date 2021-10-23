@@ -36,4 +36,3 @@ input_mode = {
 print("interface {}".format(interface))
 print("\n".join(input_mode[mode]))
 
-test
